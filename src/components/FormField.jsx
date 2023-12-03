@@ -28,18 +28,18 @@ const FormField = ({
             Surprise Me
           </button>
         )}
-        <input
-          type={type}
-          id={name}
-          name={name}
-          placeholder={placeholder}
-          value={value}
-          onChange={handleChange}
-          required
-          className="bg-gray-50 border border-gray-300 text-gray-900
-            text-sm rounder-lg focus:ring-[#4649ff] focus-border-[#4649ff] outline block w-full p-3"
-        />
       </div>
+      <input
+        type={type}
+        id={name}
+        name={name}
+        placeholder={placeholder}
+        value={value}
+        onChange={handleChange}
+        required
+        className="bg-gray-50 border border-gray-300 text-gray-900
+            text-sm rounder-lg focus:ring-[#64649ff] focus:border-[#64649ff] outline-none block w-full p-3"
+      />
     </div>
   );
 };
