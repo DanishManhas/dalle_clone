@@ -22,13 +22,15 @@ router.route("/").get((req, res) => {
 
 router.route("/").post(async (req, res) => {
   try {
-    const prompt = req.body;
+    const prompt = req.body.prompt;
+    console.log("Here's what we recieve in the request", prompt)
 
-    const aiResponse = await openai.createImage({
+    const aiResponse = await openai.images.generate({
       prompt,
       n: 1,
-      size: "1024 *1024",
+      size: "1024x1024",
       response_format: "b64_json",
+      model:"dall-e-2"
     });
 
     const image = aiResponse.data.data[0].b64_json;
